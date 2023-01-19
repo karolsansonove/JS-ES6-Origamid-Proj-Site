@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-  <nav class="menu js-menu">
+  <nav class="menu" data-menu="suave"> <!-- classe js-menu removida -->
     <ul>
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">Faq</a></li>
@@ -19,9 +19,9 @@
       <li><a href="https://www.origamid.com/">Dev →</a></li>
     </ul>
   </nav>
-  <section class="grid-section animais js-scroll" id="animais">
+  <section class="grid-section animais" id="animais" data-anime="scroll"> <!-- classe js-scroll removida -->
     <h1 class="titulo">Animais Fantásticos</h1>
-    <ul class="animais-lista js-tabmenu">
+    <ul class="animais-lista" data-tab="menu"> <!-- classe js-tabmenu removida -->
       <li>
         <img src="img/imagem1.jpg">
       </li>
@@ -41,8 +41,8 @@
         <img src="img/imagem6.jpg">
       </li>
     </ul>
-    <div class="animais-descricao js-tabcontent">
-      <section>
+    <div class="animais-descricao" data-tab="content"> <!-- classe js-tabcontent removida -->
+      <section data-anime="show-right">
         <h2>Raposa</h2>
         <p>Lorem ipsum dolor sit. Odit error culpa, totam velit quae rem pariatur accusantium nemo, repellat, possimus dolorum vel est. Ut aspernatur odio commodi exercitationem.</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic accusantium, neque soluta blanditiis ad recusandae dignissimos!</p>
@@ -50,35 +50,35 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis quae similique quasi accusantium provident explicabo fugit dolorem sequi itaque.</p>
       </section>
       
-      <section>
+      <section data-anime="show-down">
         <h2>Esquilo</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit error culpa, totam velit quae rem pariatur accusantium nemo, repellat, possimus dolorum vel est. Ut aspernatur odio commodi exercitationem.</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic accusantium, neque soluta blanditiis ad recusandae dignissimos!</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi ab aliquid ea magni, sapiente obcaecati eaque mollitia consequatur incidunt nemo, doloribus deserunt expedita!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis quae similique quasi accusantium provident explicabo fugit dolorem sequi itaque.</p>
       </section>
-      <section>
+      <section data-anime="show-right">
         <h2>Urso</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus sed quo ad commodi eum ratione adipisci libero? Minus qui odio error, voluptatibus culpa nulla quibusdam ea.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quaerat architecto odit optio.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, incidunt et! Error commodi, quis autem eveniet pariatur unde?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minima sunt vel amet maxime.</p>
       </section>
-      <section>
+      <section data-anime="show-down">
         <h2>Lobo</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, at exercitationem? Reprehenderit deserunt iure magnam?</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic accusantium, neque soluta blanditiis ad recusandae dignissimos!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum fugiat nihil.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis quae similique quasi accusantium provident explicabo fugit dolorem sequi itaque.</p>
       </section>
-      <section>
+      <section data-anime="show-right">
         <h2>Macaco</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus sed quo ad commodi eum ratione adipisci libero? Minus qui odio error, voluptatibus culpa nulla quibusdam ea.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quaerat architecto odit optio.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, incidunt et! Error commodi, quis autem eveniet pariatur unde?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minima sunt vel amet maxime.</p>
       </section>
-      <section>
+      <section data-anime="show-down">
         <h2>Leão</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, at exercitationem? Reprehenderit deserunt iure magnam?</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic accusantium, neque soluta blanditiis ad recusandae dignissimos!</p>
@@ -88,9 +88,9 @@
     </div>
   </section>
 
-  <section class="grid-section faq js-scroll" id="faq">
+  <section class="grid-section faq" id="faq" data-anime="scroll"> <!-- classe js-scroll removida -->
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista js-accordion">
+    <dl class="faq-lista" data-anime="accordion"> <!-- classe js-accordion removida -->
       <dt>Qual a idade dos animais?</dt>
       <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, quos cum? Enim deserunt mollitia inventore!</dd>
       <dt>Qual a diferença?</dt>
@@ -100,7 +100,7 @@
     </dl>
   </section>
 
-  <section class="grid-section contato js-scroll" id="contato">
+  <section class="grid-section contato" id="contato" data-anime="scroll"> <!-- classe js-scroll removida -->
     <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <img src="img/mapa.png">

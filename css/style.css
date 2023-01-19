@@ -207,20 +207,43 @@ body {
   }
 }
 
-.js .js-tabmenu {
+.js [data-tab="menu"] {
   cursor: pointer;
 }
 
-.js .js-tabcontent section {
+.js [data-tab="content"] section {
   display: none;
 }
 
-.js .js-tabcontent section.ativo {
+.js [data-tab="content"] section.ativo {
   display: block;
   animation: show .5s forwards; /* forwards mantém o estado da animação do keyframe 'show' em 'to' */
 }
 
-@keyframes show {
+.js [data-tab="content"] section.ativo.show-right { /* classe ativo e show-right juntas */
+  display: block;
+  animation: show-right .5s forwards;
+}
+/* Forma alternativa sem uso de JS:
+[data-tab="content"] section.ativo[data-anime="show-right"] {
+  display: block;
+  animation: show-right .5s forwards;
+}
+*/
+
+.js [data-tab="content"] section.ativo.show-down { /* classe ativo e show-down juntas */
+  display: block;
+  animation: show-down .5s forwards;
+}
+
+/* Forma alternativa sem uso de JS:
+[data-tab="content"] section.ativo[data-anime="show-down"] {
+  display: block;
+  animation: show-down .5s forwards;
+}
+*/
+
+@keyframes show-right {
   from {
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
@@ -231,24 +254,35 @@ body {
   }
 }
 
-.js .js-accordion dt {
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.js [data-anime="accordion"] dt {
   cursor: pointer;
 }
 
-.js .js-accordion dt::after { 
+.js [data-anime="accordion"] dt::after { 
   content: '⯆'; /* ícone aqui: http://xahlee.info/comp/unicode_arrows.html */
   margin-left: 10px;
 }
 
-.js .js-accordion dt.ativo::after {
+.js [data-anime="accordion"] dt.ativo::after {
   content: '⯅';
 }
 
-.js .js-accordion dd {
+.js [data-anime="accordion"] dd {
   display: none;
 }
 
-.js .js-accordion dd.ativo {
+.js [data-anime="accordion"] dd.ativo {
   display: block;
   animation: slideDown .5s forwards;
 }
@@ -264,13 +298,13 @@ body {
   }
 }
 
-.js .js-scroll {
+.js [data-anime="scroll"] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
   transition: .3s;
 }
 
-.js .js-scroll.ativo {
+.js [data-anime="scroll"].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }

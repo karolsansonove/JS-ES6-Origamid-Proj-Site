@@ -1,7 +1,7 @@
 //// NAVEGAÇÃO POR TABS
 function initTabNav() { // função que inicia navegação por tab
-    const tabMenu = document.querySelectorAll('.js-tabmenu li');
-    const tabContent = document.querySelectorAll('.js-tabcontent section');
+    const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
+    const tabContent = document.querySelectorAll('[data-tab="content"] section');
     const activeClass = 'ativo';
 
     if (tabMenu.length && tabContent.length) { // só executa se existir elementos em tabMenu e tabContent
@@ -13,7 +13,8 @@ function initTabNav() { // função que inicia navegação por tab
             tabContent.forEach((item) => { // remove classe 'ativo' de todas as sections
                 item.classList.remove(activeClass);
             });
-            tabContent[index].classList.add(activeClass); // adiciona classe 'ativo' apenas no index do argumento
+            const direcao = tabContent[index].dataset.anime; // armazena valor do dataset
+            tabContent[index].classList.add(activeClass, direcao); // adiciona classe 'ativo' e direcao no index do argumento
         }
 
         // adicionando evento de click nos elementos do tabMenu
@@ -29,7 +30,7 @@ initTabNav();
 
 //// ACCORDION LIST
 function initAccordion() {
-    const accordionList = document.querySelectorAll('.js-accordion dt');
+    const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
     const activeClass = 'ativo';
     if (accordionList.length) {
 
@@ -50,7 +51,7 @@ initAccordion();
 
 // SCROLL SUAVE LINKS INTERNOS
 function initScrollSuave() {
-    const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+    const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
 
     function scrollToSection(event) { // scroll suave
         event.preventDefault(); // prevenindo comportamento padrão do link ao clicar
@@ -85,7 +86,7 @@ initScrollSuave();
 
 //// ANIMAÇÃO PARA DAS SECTIONS NO SCROLL
 function initAnimationSections() {
-    const sections = document.querySelectorAll('.js-scroll');
+    const sections = document.querySelectorAll('[data-anime="scroll"]');
     const windowPercent = window.innerHeight * 0.7; // 70% da altura da tela;
 
     function animaScroll() { // callback
