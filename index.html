@@ -15,6 +15,15 @@
     <nav class="menu" data-menu="suave"> <!-- classe js-menu removida -->
       <ul>
         <li><a href="#animais">Animais</a></li>
+        <li data-dropdown>
+          <a href="sobre.html">Sobre</a>
+          <ul class="dropdown-menu"> <!-- submenu -->
+            <li><a href="empresa.html">Empresa</a></li>
+            <li><a href="equipe.html">Equipe</a></li>
+            <li><a href="socios.html">Sócios</a></li>
+            <li><a href="investidores.html">Investidores</a></li>
+          </ul>
+        </li>
         <li><a href="#faq">Faq</a></li>
         <li><a href="#contato">Contato</a></li>
         <li><a data-modal="abrir" href="login.html">Login →</a></li>
@@ -103,7 +112,7 @@
 
     <section class="grid-section contato" id="contato" data-anime="scroll"> <!-- classe js-scroll removida -->
       <h1 class="titulo">Contato</h1>
-      <div class="mapa">
+      <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento.">
         <img src="img/mapa.png">
       </div>
       <ul class="dados">
