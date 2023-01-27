@@ -7,14 +7,15 @@
     animation: show-up .3s forwards;
 }
 
-[data-dropdown]:hover .dropdown-menu {
+[data-dropdown]:hover .dropdown-menu,
+[data-dropdown].active .dropdown-menu {
     display: block;
 }
 
 @keyframes show-up {
     from {
         opacity: 0;
-        transform: translate3d(0, 30px, 0);
+        transform: translate3d(0, 20px, 0);
     }
     to {
         opacity: 1;
