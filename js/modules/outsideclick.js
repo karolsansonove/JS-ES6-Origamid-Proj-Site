@@ -1,10 +1,14 @@
+/*
+    função que fecha o menu com click ou teouchstart fora do elemento
+*/
 export default function outsideClick(element, events, callback) {
     const html = document.documentElement;
     const outside = 'data-outside';
     
     if (!element.hasAttribute(outside)) { // se o data-outside existir, significa que o evento já existe, não irá adicionar mais de uma vez
         events.forEach(userEvent => {
-            html.addEventListener(userEvent, handleOutsideClick); // adiciona evento toda vez que ocorre clique ou touchstart no menu (handleClick)
+            // adiciona evento somente após bubble
+            setTimeout(() => html.addEventListener(userEvent, handleOutsideClick) ); // adiciona evento toda vez que ocorre clique ou touchstart no menu (handleClick)
         });
         
         element.setAttribute(outside, '');
