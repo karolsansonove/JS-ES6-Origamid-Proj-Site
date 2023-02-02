@@ -2,13 +2,16 @@
 export default function initAnimationSections() {
     const sections = document.querySelectorAll('[data-anime="scroll"]');
     const windowPercent = window.innerHeight * 0.7; // 70% da altura da tela;
+    const ativo = 'ativo';
 
     function animaScroll() { // callback
         sections.forEach((section) => {
             const sectionTop = section.getBoundingClientRect().top; // armazenando o valor de altura entre topo da página e section
             const isSectionVisible = (sectionTop - windowPercent) < 0; // armazenando boolean, se altura está abaixo de 70% ou não
             if (isSectionVisible) {
-                section.classList.add('ativo');
+                section.classList.add(ativo);
+            } else if (section.classList.contains(ativo)) {
+                section.classList.remove(ativo);
             }
         });
     }
