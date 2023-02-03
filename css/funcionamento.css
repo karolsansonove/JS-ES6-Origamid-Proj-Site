@@ -1,4 +1,4 @@
-[data-semana]::after {
+.js [data-semana]::after {
     display: inline-block;
     content: '';
     width: 6px;
@@ -9,6 +9,6 @@
     background: red;
 }
 
-[data-semana].aberto::after {
+.js [data-semana].aberto::after {
     background: rgb(0, 255, 0);
 }
